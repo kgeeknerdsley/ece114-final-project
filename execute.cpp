@@ -2,7 +2,6 @@
 #include "Rectangle.h"
 
 void main() {
-
 	//Case 1: z, y, x, w
 	//Case 2: a, b, c, d
 	//Case 3: z, c, x, w
@@ -25,12 +24,27 @@ void main() {
 	Rectangle case3 = Rectangle(z, c, x, w);
 	Rectangle case4 = Rectangle(v, x, y, z);
 
-	float test1, test2;
+	float case1Length1, case1Length2, case1Width1, case1Width2;
 
-	test1 = case1.getPoint1X();
-	test2 = case1.getPoint1Y();
+	case1Length1 = case1.getDistance(z, y);
+	case1Length2 = case1.getDistance(w, x);
+	case1Width1 = case1.getDistance(y,x);
+	case1Width2 = case1.getDistance(z, w);
 
-	cout << test1 << endl << test2;
+	if (case1.isRectangle(case1Length1, case1Length2, case1Width1, case1Width2)) {
+		cout << "Case 1 is a rectangle!";
+
+		if (case1.isSquare(case1Length1, case1Width1)) {
+			cout << "Case 1 is also a square!";
+		}
+		else {
+			cout << "Case 1 is not a square.";
+		}
+	}
+	else {
+		cout << "Case 1 is not a rectangle!";
+	}
+
 
 	system("pause");
 }
