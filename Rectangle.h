@@ -10,7 +10,8 @@ class Rectangle {
 		Rectangle();
 		Rectangle(Point, Point, Point, Point);
 		
-		bool isRectangle();
+		bool isRectangle(float, float, float, float);
+		bool isSquare(float, float);
 
 		void setPoint1(Point);
 		void setPoint2(Point);
@@ -26,7 +27,7 @@ class Rectangle {
 		float getPoint4X();
 		float getPoint4Y();
 
-		float getLength(Point, Point);
+		float getDistance(Point, Point);
 
 	private:
 		Point point1;
