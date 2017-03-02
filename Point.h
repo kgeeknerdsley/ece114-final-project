@@ -4,21 +4,17 @@
 class Point {
 	public:
 		Point();
-		Point(double, double);
+		Point(double xPt, double yPt);
 
-		setXPt(double);
-		setYPt(double);
+		void setXPt(double);
+		void setYPt(double);
 
-
-		getXPt(double);
-		getYPt(double);
-
-		setXPt(double);
-		setYPt(double);
+		double getXPt();
+		double getYPt();
 
 	private:
 		double xPt;
 		double yPt;
-}
+};
 
 #endif
